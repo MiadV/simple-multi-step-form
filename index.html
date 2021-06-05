@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Multi step form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image__wrapper">
+        <img src="./assets/image1.svg" alt="vector" />
+      </div>
+
+      <div class="form__wrapper">
+        <form action="/#" autocomplete="off">
+          <!-- Step One -->
+          <div class="form active">
+            <h1 class="form__title">Multi Step Form</h1>
+            <p class="form__subtitle">Personal info</p>
+
+            <div class="form__input">
+              <input type="text" placeholder="Name" />
+            </div>
+            <div class="form__input">
+              <input type="text" placeholder="Last name" />
+            </div>
+            <div class="form__input">
+              <input type="email" placeholder="Email" />
+            </div>
+
+            <div class="button__wrapper">
+              <button id="next" class="button button--filled">Next</button>
+            </div>
+          </div>
+          <!-- Step Two -->
+
+          <div class="form">
+            <h1 class="form__title">Multi Step Form</h1>
+            <p class="form__subtitle">Contact info</p>
+
+            <div class="form__input">
+              <input type="text" placeholder="Phone number" />
+            </div>
+            <div class="form__input">
+              <input type="text" placeholder="Address" />
+            </div>
+
+            <div class="button__wrapper">
+              <button type="submit" class="button button--filled">
+                Submit
+              </button>
+              <button id="back" class="button button--outlined">Back</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- JS Files -->
+    <script src="./main.js"></script>
+  </body>
+</html>

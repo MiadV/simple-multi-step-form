@@ -1,0 +1,165 @@
+/* Imports */
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@600;900&display=swap");
+
+/* Variables */
+
+:root {
+  /*----------  Colors  ----------*/
+  --clr-primary: #e93b81;
+  --clr-primary-light: #f5abc9;
+  --clr-text-primary: #202d49;
+  --clr-text-secondary: #ccc;
+  --clr-bg-light: #fafafa;
+
+  /*----------  Typography  ----------*/
+  --font-family: "Mulish", sans-serif;
+  --fs-lg: 1.5rem; /* 24px */
+  --fs-md: 1rem;
+  --fs-sm: 0.875rem;
+  --fw-bold: 900;
+  --fw-md: 600;
+}
+
+/*----------  Overrides  ----------*/
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-md);
+  color: var(--clr-text-primary);
+  background-color: var(--clr-bg-light);
+}
+
+h1 {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-lg);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*----------  End of Overrides  ----------*/
+.active {
+  display: block !important;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100vh;
+  padding: 1rem 1.5rem;
+}
+
+.image__wrapper {
+  margin-top: 2rem;
+  justify-self: center;
+  max-width: 450px;
+}
+
+.form__wrapper {
+  justify-self: center;
+  margin-top: -15rem;
+  padding: 3rem;
+  border-radius: 10px;
+  background-color: white;
+  height: max-content;
+  box-shadow: 0 20px 50px -40px #000;
+}
+
+.form {
+  display: none;
+}
+
+.form__title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form__subtitle {
+  margin-bottom: 1rem;
+}
+
+.form__input {
+  margin-bottom: 1rem;
+}
+
+.form__input > input {
+  width: 100%;
+  outline: none;
+  border-color: var(--clr-text-secondary);
+  border-style: solid;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: var(--fs-md);
+  font-family: var(--font-family);
+
+  transition: border-color 0.1s ease-in-out;
+}
+
+.form__input > input:focus {
+  border-color: var(--clr-primary-light);
+}
+
+.button {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  background-color: transparent;
+  text-align: center;
+  font-size: var(--fs-md);
+  font-weight: var(--fw-md);
+  font-family: var(--font-family);
+
+  transition: box-shadow 0.3s ease, trasnform 0.2s ease-in;
+}
+
+button:hover {
+  box-shadow: 0 20px 30px -11px var(--clr-primary-light);
+  transform: scale(1.01);
+  cursor: pointer;
+}
+
+.button--filled {
+  color: white;
+  background-color: var(--clr-primary);
+}
+
+.button--outlined {
+  border-color: var(--clr-primary);
+  border-style: solid;
+  color: var(--clr-primary);
+}
+
+@media screen and (min-width: 500px) {
+  form {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    align-items: center;
+  }
+  .image__wrapper {
+    max-width: 600px;
+  }
+
+  .form__wrapper {
+    margin-top: 0;
+  }
+}
